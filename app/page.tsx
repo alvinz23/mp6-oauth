@@ -7,11 +7,17 @@ type SearchParams = { code?: string; error?: string };
 export default async function HomePage({
   searchParams,
 }: {
-  searchParams: SearchParams;
+  searchParams: { code?: string; error?: string };
 }) {
-  if (searchParams.error || !searchParams.code) {
+  const { code } = searchParams;
+
+  if (!code) {
     return <SignInButton />;
   }
 
-  return <UserGreeting code={searchParams.code} />;
+  return (
+    <main>
+      <UserGreeting code={code} />
+    </main>
+  );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!;
-const REDIRECT_URI = "http://localhost:3000";
+const REDIRECT_URI = process.env.NEXT_PUBLIC_REDIRECT_URI!; 
 
 const MainContainer = styled.main`
   display: flex;
