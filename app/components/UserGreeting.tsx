@@ -18,7 +18,7 @@ export default async function UserGreeting({ code }: Props) {
     headers: { Authorization: `Bearer ${access_token}` },
   });
   const user = await userRes.json();
-  if (!user){
+  if (!user || !user.login ){
     redirect("https://mp6-oauth-pl2e.vercel.app/"); 
   }
   const date = new Date().toLocaleDateString("en-US");
