@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!;
-const REDIRECT_URI = process.env.NEXT_PUBLIC_REDIRECT_URI!; 
+const REDIRECT_URI = "https://mp6-oauth-pl2e.vercel.app/"; 
 
 const MainContainer = styled.main`
   display: flex;
