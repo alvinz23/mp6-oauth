@@ -22,8 +22,8 @@ export default async function UserGreeting({ code }: Props) {
   return (
     <main className="border-4 rounded-lg border-black bg-blue-700 flex items-center justify-center w-[50%] mx-auto mt-40 h-96">
       <ul className="text-5xl text-white space-y-12">
-       <li>Name : {user.name || user.login}!</li>
-       <li>Email : {user.email || "No email"}</li>
+        <li>Authentication successful!</li>
+       <li>Name : {user.name || user.login}</li>
        <li>Current date : {date}</li>
       </ul>
     </main>
