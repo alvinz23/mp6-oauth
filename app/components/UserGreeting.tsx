@@ -17,11 +17,16 @@ export default async function UserGreeting({ code }: Props) {
   });
   const user = await userRes.json();
 
+  const date = new Date().toLocaleDateString("en-US");
+
   return (
-    <main className="flex h-screen items-center justify-center">
-      <h1 className="text-2xl">
-        Hello, {user.name || user.login}!
-      </h1>
+    <main className="border-4 rounded-lg border-black bg-blue-700 flex items-center justify-center w-[50%] mx-auto mt-40 h-96">
+      <ul className="text-5xl text-white space-y-12">
+       <li>Name : {user.name || user.login}!</li>
+       <li>Email : {user.email || "No email"}</li>
+       <li>Current date : {date}</li>
+      </ul>
     </main>
   );
 }
+
