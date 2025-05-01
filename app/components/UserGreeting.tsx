@@ -1,7 +1,6 @@
 
 import { redirect } from "next/navigation";
 
-
 type Props = { code: string };
 export default async function UserGreeting({ code }: Props) {
   const CLIENT_ID     = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!;
@@ -19,7 +18,7 @@ export default async function UserGreeting({ code }: Props) {
     headers: { Authorization: `Bearer ${access_token}` },
   });
   const user = await userRes.json();
-  if (!user !! (!user.name)){
+  if (!user){
     redirect("https://mp6-oauth-pl2e.vercel.app/"); 
   }
   const date = new Date().toLocaleDateString("en-US");
