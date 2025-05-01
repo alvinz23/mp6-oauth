@@ -3,7 +3,7 @@ type Props = { code: string };
 export default async function UserGreeting({ code }: Props) {
   const CLIENT_ID     = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!;
   const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET!;
-  const REDIRECT_URI  = "http://localhost:3000";
+  const REDIRECT_URI  = process.env.NEXT_PUBLIC_REDIRECT_URI!; 
 
   const tokenRes = await fetch(
     "https://github.com/login/oauth/access_token",
