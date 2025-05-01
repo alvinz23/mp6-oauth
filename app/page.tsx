@@ -2,8 +2,6 @@
 import { SignInButton } from "../app/components/SignInButton"
 import UserGreeting from "../app/components/UserGreeting";
 
-type SearchParams = { code?: string; error?: string };
-
 export default async function HomePage({
   searchParams,
 }: {
